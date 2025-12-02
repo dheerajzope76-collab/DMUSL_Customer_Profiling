@@ -58,10 +58,10 @@ def load_random_forest_model():
 
 
 def fit_kmeans_from_data():
-    \"""
+    """
     Fit KMeans on engineered features using the original dataset,
     so we can assign new customers to the same 3 clusters.
-    \"""
+    """
     global kmeans_model, scaler
 
     if not DATA_PATH.exists():
@@ -159,10 +159,10 @@ def ensure_kmeans():
 # ---------------------------
 
 def engineer_features_from_input(user_input: dict) -> pd.DataFrame:
-    \"""
+    """
     user_input: dict with raw inputs from the UI
     Returns a single-row DataFrame with engineered features as in clustering.
-    \"""
+    """
     # Create base DataFrame
     df = pd.DataFrame([user_input])
 
@@ -216,9 +216,9 @@ def engineer_features_from_input(user_input: dict) -> pd.DataFrame:
 
 
 def assign_cluster(features_df: pd.DataFrame):
-    \"""
+    """
     Use KMeans to assign cluster to the new customer based on engineered features.
-    \"""
+    """
     kmeans, sc = ensure_kmeans()
     if kmeans is None or sc is None:
         return None, None, None
@@ -244,21 +244,21 @@ def main():
     st.title("🎯 Campaign Response Prediction & Customer Segmentation")
 
     st.markdown(
-        \"""
+        """
 This app uses a **Random Forest (with SMOTE)** model to predict whether a customer is
 **likely to respond** to a marketing campaign, and then assigns them to one of three
 customer **segments (clusters)** with recommended marketing strategies.
-\"""
+"""
     )
 
     # Sidebar info
     st.sidebar.header("About")
     st.sidebar.markdown(
-        \"""
+        """
 - Model: **Random Forest Classifier (with SMOTE)**
 - Segmentation: **K-Means (k=3)** on behavioral + demographic features  
 - Goal: Identify **who will respond**, and **how to market** to them.
-\"
+"""
     )
 
     st.header("🧾 Enter Customer Details")
