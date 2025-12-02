@@ -58,7 +58,7 @@ def load_random_forest_model():
 
 
 def fit_kmeans_from_data():
-    \"""
+    """
     Fit KMeans on engineered features using the original dataset,
     so we can assign new customers to the same 3 clusters.
     \"""
