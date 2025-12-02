@@ -61,7 +61,7 @@ def fit_kmeans_from_data():
     """
     Fit KMeans on engineered features using the original dataset,
     so we can assign new customers to the same 3 clusters.
-    \"""
+    """
     global kmeans_model, scaler
 
     if not DATA_PATH.exists():
@@ -159,7 +159,7 @@ def ensure_kmeans():
 # ---------------------------
 
 def engineer_features_from_input(user_input: dict) -> pd.DataFrame:
-    \"""
+    """
     user_input: dict with raw inputs from the UI
     Returns a single-row DataFrame with engineered features as in clustering.
     \"""
