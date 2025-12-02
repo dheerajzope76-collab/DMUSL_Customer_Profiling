@@ -162,7 +162,7 @@ def engineer_features_from_input(user_input: dict) -> pd.DataFrame:
     """
     user_input: dict with raw inputs from the UI
     Returns a single-row DataFrame with engineered features as in clustering.
-    \"""
+    """
     # Create base DataFrame
     df = pd.DataFrame([user_input])
 
@@ -216,9 +216,9 @@ def engineer_features_from_input(user_input: dict) -> pd.DataFrame:
 
 
 def assign_cluster(features_df: pd.DataFrame):
-    \"""
+    """
     Use KMeans to assign cluster to the new customer based on engineered features.
-    \"""
+    """
     kmeans, sc = ensure_kmeans()
     if kmeans is None or sc is None:
         return None, None, None
@@ -244,11 +244,11 @@ def main():
     st.title("🎯 Campaign Response Prediction & Customer Segmentation")
 
     st.markdown(
-        \"""
+        """
 This app uses a **Random Forest (with SMOTE)** model to predict whether a customer is
 **likely to respond** to a marketing campaign, and then assigns them to one of three
 customer **segments (clusters)** with recommended marketing strategies.
-\"""
+"""
     )
 
     # Sidebar info
