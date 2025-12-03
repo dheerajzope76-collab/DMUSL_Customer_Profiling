@@ -76,12 +76,12 @@ def fit_kmeans():
     df["Age"] = 2024 - df["Year_Birth"]
 
     mnt_cols = [
-        "MntWines",
-        "MntFruits",
-        "MntMeatProducts",
-        "MntFishProducts",
-        "MntSweetProducts",
-        "MntGoldProds",
+        "Amt Wines",
+        "Amt Fruits",
+        "Amt MeatProducts",
+        "Amt FishProducts",
+        "Amt SweetProducts",
+        "Amt GoldProds",
     ]
     df["Total_Expenditure"] = df[mnt_cols].sum(axis=1)
     df["Average_Monthly_Spend"] = df["Total_Expenditure"] / 24.0
@@ -133,12 +133,12 @@ def engineer_features(user_dict):
     df = pd.DataFrame([user_dict])
 
     mnt_cols = [
-        "MntWines",
-        "MntFruits",
-        "MntMeatProducts",
-        "MntFishProducts",
-        "MntSweetProducts",
-        "MntGoldProds",
+        "Amt Wines",
+        "Amt Fruits",
+        "Amt MeatProducts",
+        "Amt FishProducts",
+        "Amt SweetProducts",
+        "Amt GoldProds",
     ]
     df["Total_Expenditure"] = df[mnt_cols].sum(axis=1)
     df["Average_Monthly_Spend"] = df["Total_Expenditure"] / 24.0
@@ -268,12 +268,12 @@ def main():
         )
 
     with col2:
-        mw = st.number_input("MntWines (last 2 years)", 0.0, 20000.0, 500.0)
-        mf = st.number_input("MntFruits (last 2 years)", 0.0, 5000.0, 50.0)
-        mm = st.number_input("MntMeatProducts (last 2 years)", 0.0, 20000.0, 200.0)
-        mfsh = st.number_input("MntFishProducts (last 2 years)", 0.0, 10000.0, 50.0)
-        msw = st.number_input("MntSweetProducts (last 2 years)", 0.0, 10000.0, 50.0)
-        mg = st.number_input("MntGoldProds (last 2 years)", 0.0, 50000.0, 200.0)
+        mw = st.number_input("Amt Wines (last 2 years)", 0.0, 20000.0, 500.0)
+        mf = st.number_input("Amt Fruits (last 2 years)", 0.0, 5000.0, 50.0)
+        mm = st.number_input("Amt MeatProducts (last 2 years)", 0.0, 20000.0, 200.0)
+        mfsh = st.number_input("Amt FishProducts (last 2 years)", 0.0, 10000.0, 50.0)
+        msw = st.number_input("Amt SweetProducts (last 2 years)", 0.0, 10000.0, 50.0)
+        mg = st.number_input("Amt GoldProds (last 2 years)", 0.0, 50000.0, 200.0)
         nwp = st.number_input("NumWebPurchases", 0, 100, 3)
         ncp = st.number_input("NumCatalogPurchases", 0, 100, 2)
         nsp = st.number_input("NumStorePurchases", 0, 100, 5)
@@ -290,12 +290,12 @@ def main():
             "Teenhome": teenhome,
             "Education": edu,
             "Marital_Status": marital,
-            "MntWines": mw,
-            "MntFruits": mf,
-            "MntMeatProducts": mm,
-            "MntFishProducts": mfsh,
-            "MntSweetProducts": msw,
-            "MntGoldProds": mg,
+            "Amt Wines": mw,
+            "Amt Fruits": mf,
+            "Amt MeatProducts": mm,
+            "Amt FishProducts": mfsh,
+            "Amt SweetProducts": msw,
+            "Amt GoldProds": mg,
             "NumWebPurchases": nwp,
             "NumCatalogPurchases": ncp,
             "NumStorePurchases": nsp,
